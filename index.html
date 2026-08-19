@@ -5,42 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Groupe d'Étude Trésor - Prépa DE</title>
   <style>
-    :root { --primary-color: #0d6efd; --bg-color: #f4f6f8; }
-    body { font-family: sans-serif; margin: 0; background-color: var(--bg-color); }
-    header { background-color: var(--primary-color); color: white; padding: 20px; text-align: center; }
+    :root { 
+      --primary-color: #0d6efd; 
+      --wave-color: #1dc2ec; 
+      --btn-green: #28a745; 
+      --bg-color: #f4f6f8; 
+    }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background-color: var(--bg-color); color: #333; }
+    header { background-color: var(--primary-color); color: white; padding: 25px 15px; text-align: center; }
+    header h1 { margin: 0; font-size: 24px; }
+    header p { margin: 5px 0 0 0; opacity: 0.9; font-size: 14px; }
     .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
-    .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-    .box { background: #f8f9fa; border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 5px; }
-    .btn { display: block; background: #28a745; color: white; padding: 15px; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    h2 { color: #111; font-size: 18px; border-bottom: 2px solid var(--bg-color); padding-bottom: 8px; margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 10px; }
+    .box { background: #f8f9fa; border: 1px solid #e9ecef; padding: 10px; text-align: center; border-radius: 6px; font-size: 14px; }
+    
+    /* Styles Tarifs */
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    .price-table th, .price-table td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; }
+    .price-table th { background-color: #f8f9fa; font-weight: bold; }
+    .price-tag { font-weight: bold; color: #2b78e4; }
+
+    /* Buttons */
+    .btn { display: block; width: 100%; padding: 14px 0; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px; box-sizing: border-box; }
+    .btn-wave { background-color: var(--wave-color); color: white; }
+    .btn-forms { background-color: var(--btn-green); color: white; }
+    
+    ol { padding-left: 20px; line-height: 1.6; }
+    .note { font-size: 12px; color: #666; margin-top: 8px; font-style: italic; }
   </style>
 </head>
 <body>
-  <header><h1>Groupe d'Étude Trésor</h1></header>
+
+  <header>
+    <h1>Groupe d'Étude Trésor</h1>
+    <p>Préparation aux Examens du Diplôme d'État</p>
+  </header>
+
   <div class="container">
+
+    <!-- Programmes -->
     <div class="card">
       <h2>Nos Programmes</h2>
       <p><strong>1. Auxiliaire Polyvalent</strong></p>
       <div class="box">Auxiliaire Polyvalent</div>
+
       <p style="margin-top:20px;"><strong>2. Auxiliaires Spécialisés</strong></p>
       <div class="grid">
-        <div class="box">ASI<br><small>Soins Infirmiers</small></div>
-        <div class="box">ASO<br><small>Soins Obstétricaux</small></div>
-        <div class="box">ABM<br><small>Biologie Médicale</small></div>
-        <div class="box">AHA<br><small>Hygiène & Assainissement</small></div>
-        <div class="box">AIM<br><small>Imagerie Médicale</small></div>
-        <div class="box">APGP<br><small>Préparateur & Gestionnaire</small></div>
+        <div class="box"><strong>ASI</strong><br><small>Soins Infirmiers</small></div>
+        <div class="box"><strong>ASO</strong><br><small>Soins Obstétricaux</small></div>
+        <div class="box"><strong>ABM</strong><br><small>Biologie Médicale</small></div>
+        <div class="box"><strong>AHA</strong><br><small>Hygiène & Assainissement</small></div>
+        <div class="box"><strong>AIM</strong><br><small>Imagerie Médicale</small></div>
+        <div class="box"><strong>APGP</strong><br><small>Préparateur & Gestionnaire</small></div>
       </div>
     </div>
+
+    <!-- Tarifs & Modalités -->
+    <div class="card">
+      <h2>Tarifs & Modalités</h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Filière</th>
+            <th>Adhésion</th>
+            <th>Mensualité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Auxiliaire Polyvalent</strong></td>
+            <td class="price-tag">3 500 F</td>
+            <td class="price-tag">1 500 F</td>
+          </tr>
+          <tr>
+            <td><strong>Auxiliaires Spécialisés</strong></td>
+            <td class="price-tag">5 000 F</td>
+            <td class="price-tag">2 000 F</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Étapes d'inscription -->
     <div class="card">
       <h2>Comment s'inscrire</h2>
       <ol>
-        <li>Remplir le formulaire</li>
-        <li>Payer l'adhésion</li>
-        <li>Rejoindre Telegram</li>
+        <li>Remplissez le formulaire d'inscription en ligne.</li>
+        <li>Effectuez le paiement de votre adhésion via Wave.</li>
+        <li>Rejoignez le groupe Telegram d'étude.</li>
       </ol>
-      <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn">Commencer l'inscription</a>
+
+      <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn btn-forms">1. Remplir le formulaire d'inscription</a>
+      <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="btn btn-wave">2. Payer l'adhésion via Wave</a>
+      <p class="note">* Cliquez sur le bouton Wave ci-dessus pour ouvrir l'application et effectuer le transfert.</p>
     </div>
+
   </div>
+
 </body>
 </html>
