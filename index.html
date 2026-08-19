@@ -388,86 +388,105 @@
   <header>
     <div class="title-top">Groupe d'Étude Trésor</div>
     <img src="IMG_20260819_155745_526.jpg" alt="Logo Groupe d'Étude Trésor" class="logo">
-    <div class="subtitle-bottom">Préparation aux examens du diplôme d'État INFAS</div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groupe d'Étude Trésor - Prépa DE INFAS</title>
+  <style>
+    :root { 
+      --primary-color: #0b2b68; 
+      --wave-color: #1dc2ec; 
+      --btn-green: #28a745; 
+      --telegram-blue: #0088cc;
+      --bg-color: #f4f6f8; 
+    }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background-color: var(--bg-color); color: #333; }
+    
+    header { background: linear-gradient(135deg, #0b2b68 0%, #164292 100%); color: white; padding: 30px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); }
+    .logo { max-width: 130px; border-radius: 50%; background-color: white; padding: 5px; margin: 0 auto 15px auto; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+    .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    h2 { color: #111; font-size: 18px; border-bottom: 2px solid var(--bg-color); padding-bottom: 8px; margin-top: 0; }
+    
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    .price-table th, .price-table td { text-align: left; padding: 10px 5px; border-bottom: 1px solid #eee; }
+    
+    .btn { display: block; width: 100%; padding: 14px 0; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 15px; border: none; cursor: pointer; font-size: 16px; }
+    .btn-forms { background-color: var(--btn-green); color: white; }
+    .btn-telegram { background-color: var(--telegram-blue); color: white; }
+    .btn-verify { background-color: var(--primary-color); color: white; }
+    
+    ol { padding-left: 20px; line-height: 1.6; }
+    .note { font-size: 13px; color: #d9534f; font-weight: bold; margin-top: 15px; }
+    
+    /* Étape cachée au départ */
+    #step-telegram { display: none; margin-top: 20px; padding-top: 15px; border-top: 2px dashed #ccc; }
+    input[type="text"] { width: 100%; padding: 12px; margin-top: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 15px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="font-size: 24px; font-weight: 800; text-transform: uppercase;">Groupe d'Étude Trésor</div>
+    <img src="IMG_20260819_155745_526.jpg" alt="Logo" class="logo">
+    <div style="font-size: 15px; opacity: 0.9;">Préparation aux examens du diplôme d'État INFAS</div>
   </header>
 
   <div class="container">
-
-    <!-- Section 1 : Inscription & Programmes -->
     <div class="card">
-      <h2>Inscription & Programmes</h2>
-      <p><strong>1. Auxiliaire Polyvalent</strong></p>
-      <div class="box">Auxiliaire Polyvalent</div>
-
-      <p style="margin-top:20px;"><strong>2. Auxiliaires Spécialisés</strong></p>
-      <div class="grid">
-        <div class="box"><strong>ASI</strong><br><small>Soins Infirmiers</small></div>
-        <div class="box"><strong>ASO</strong><br><small>Soins Obstétricaux</small></div>
-        <div class="box"><strong>ABM</strong><br><small>Biologie Médicale</small></div>
-        <div class="box"><strong>AHA</strong><br><small>Hygiène & Assainissement</small></div>
-        <div class="box"><strong>AIM</strong><br><small>Imagerie Médicale</small></div>
-        <div class="box"><strong>APGP</strong><br><small>Préparateur & Gestionnaire</small></div>
-      </div>
-    </div>
-
-    <!-- Section 2 : Tarifs & Modalités de Paiement -->
-    <div class="card">
-      <h2>Tarifs & Modalités de Paiement</h2>
-      <p style="font-size: 13px; color: #555;">Cliquez sur un bouton ci-dessous pour effectuer le paiement via <strong>Wave</strong> :</p>
-      
+      <h2>Tarifs d'Adhésion</h2>
       <table class="price-table">
-        <thead>
-          <tr>
-            <th>Filière</th>
-            <th>Adhésion</th>
-            <th>Mensualité</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Auxiliaire Polyvalent</strong></td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 3 500 F 🌊
-              </a>
-            </td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 1 500 F 🌊
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Auxiliaires Spécialisés</strong></td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 5 000 F 🌊
-              </a>
-            </td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 2 000 F 🌊
-              </a>
-            </td>
-          </tr>
-        </tbody>
+        <tr><td><strong>Aux. Polyvalent</strong></td><td>3 500 F (Adhésion)</td></tr>
+        <tr><td><strong>Aux. Spécialisés</strong></td><td>5 000 F (Adhésion)</td></tr>
       </table>
-      <p class="note">* Note : Une fois l'application Wave ouverte, effectuez le transfert vers le numéro de la coordination puis conservez la preuve de paiement.</p>
     </div>
 
-    <!-- Section 3 : Procédure -->
     <div class="card">
-      <h2>Comment s'inscrire</h2>
+      <h2>Procédure d'inscription</h2>
       <ol>
-        <li>Remplissez le formulaire d'inscription ci-dessous.</li>
-        <li>Effectuez le paiement de votre adhésion via le tableau ci-dessus.</li>
-        <li>Rejoignez ensuite le groupe Telegram d'étude.</li>
+        <li>Faites votre paiement Wave puis remplissez le formulaire ci-dessous.</li>
+        <li>Saisissez votre numéro de transaction Wave pour débloquer le contact Telegram.</li>
       </ol>
 
-      <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn btn-forms">Remplir le formulaire d'inscription</a>
-    </div>
+      <!-- ÉTAPE 1 : Formulaire -->
+      <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn btn-forms" target="_blank" onclick="showNextStep()">1. Effectuer le paiement & Remplir le Formulaire</a>
 
+      <!-- ÉTAPE 2 : Saisie du numéro de transaction -->
+      <div id="step-verification" style="display:none; margin-top:20px;">
+        <label for="wave-tx"><strong>2. Saisissez votre numéro de transaction Wave :</strong></label>
+        <input type="text" id="wave-tx" placeholder="Ex: T_1234567890">
+        <button class="btn btn-verify" onclick="validateTransaction()">Valider et afficher mon lien Telegram</button>
+      </div>
+
+      <!-- ÉTAPE 3 : Affichage du lien Telegram -->
+      <div id="step-telegram">
+        <p style="color: #28a745; font-weight: bold;">✅ Étape validée ! Cliquez ci-dessous pour rejoindre l'administration :</p>
+        <a href="https://t.me/Tresor_Prepa_INFAS" class="btn btn-telegram" target="_blank">Rejoindre l'administration sur Telegram</a>
+      </div>
+
+      <p class="note">⚠️ L'accès final au groupe d'étude sera validé uniquement après vérification du numéro de transaction par l'administration.</p>
+    </div>
   </div>
+
+  <script>
+    function showNextStep() {
+      // Affiche le champ de saisie du numéro après avoir cliqué sur le formulaire
+      setTimeout(function() {
+        document.getElementById('step-verification').style.display = 'block';
+      }, 1000);
+    }
+
+    function validateTransaction() {
+      var tx = document.getElementById('wave-tx').value.trim();
+      if(tx.length < 5) {
+        alert("Veuillez saisir un numéro de transaction Wave valide.");
+      } else {
+        document.getElementById('step-telegram').style.display = 'block';
+      }
+    }
+  </script>
 
 </body>
 </html>
