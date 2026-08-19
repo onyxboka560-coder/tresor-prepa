@@ -5,181 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Groupe d'Étude Trésor - Prépa DE</title>
   <style>
-    :root {
-      --primary-color: #0d6efd;
-      --secondary-color: #0b5ed7;
-      --bg-color: #f4f6f8;
-      --card-bg: #ffffff;
-      --text-color: #333333;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-    header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    header h1 { margin: 0; font-size: 26px; }
-    header p { margin: 5px 0 0; opacity: 0.9; }
-    
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 15px;
-    }
-    .section-card {
-      background: var(--card-bg);
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: var(--primary-color);
-      border-bottom: 2px solid #eef2f5;
-      padding-bottom: 10px;
-      margin-top: 0;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .filiere-box {
-      background: #f8f9fa;
-      border: 1px solid #e9ecef;
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-      font-weight: bold;
-    }
-    .filiere-box small {
-      display: block;
-      font-weight: normal;
-      font-size: 13px;
-      color: #6c757d;
-      margin-top: 4px;
-    }
-    .badge {
-      display: inline-block;
-      background: #e7f1ff;
-      color: var(--primary-color);
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 12px;
-      margin-bottom: 5px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 15px 0;
-      margin-top: 15px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      color: white;
-      background-color: #28a745;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
-    }
-    .step-list {
-      padding-left: 20px;
-    }
-    .step-list li {
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #6c757d;
-    }
+    :root { --primary-color: #0d6efd; --bg-color: #f4f6f8; }
+    body { font-family: sans-serif; margin: 0; background-color: var(--bg-color); }
+    header { background-color: var(--primary-color); color: white; padding: 20px; text-align: center; }
+    .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+    .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .box { background: #f8f9fa; border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 5px; }
+    .btn { display: block; background: #28a745; color: white; padding: 15px; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Groupe d'Étude Trésor</h1>
-    <p>Préparation au Diplôme d'État (DE)</p>
-  </header>
-
+  <header><h1>Groupe d'Étude Trésor</h1></header>
   <div class="container">
-
-    <!-- Section Programmes & Filières -->
-    <div class="section-card">
-      <h2>Nos Programmes & Filières</h2>
-      
+    <div class="card">
+      <h2>Nos Programmes</h2>
       <p><strong>1. Auxiliaire Polyvalent</strong></p>
+      <div class="box">Auxiliaire Polyvalent</div>
+      <p style="margin-top:20px;"><strong>2. Auxiliaires Spécialisés</strong></p>
       <div class="grid">
-        <div class="filiere-box">
-          <span class="badge">Tronc Commun</span><br>
-          Auxiliaire Polyvalent
-        </div>
-      </div>
-
-      <p style="margin-top: 25px;"><strong>2. Auxiliaires Spécialisés</strong></p>
-      <div class="grid">
-        <div class="filiere-box">
-          <span class="badge">Spécialité</span><br>ASI
-          <small>Soins Infirmiers</small>
-        </div>
-        <div class="filiere-box">
-          <span class="badge">Spécialité</span><br>ASO
-          <small>Soins Obstétricaux</small>
-        </div>
-        <div class="filiere-box">
-          <span class="badge">Spécialité</span><br>ABM
-          <small>Biologie Médicale</small>
-        </div>
-        <div class="filiere-box">
-          <span class="badge">Spécialité</span><br>AHA
-          <small>Hygiène & Assainissement</small>
-        </div>
-        <div class="filiere-box">
-          <span class="badge">Spécialité</span><br>AIM
-          <small>Imagerie Médicale</small>
-        </div>
-        <div class="filiere-box">
-          <span class="badge">Spécialité</span><br>APGP
-          <small>Préparateur & Gestionnaire en Pharmacie</small>
-        </div>
+        <div class="box">ASI<br><small>Soins Infirmiers</small></div>
+        <div class="box">ASO<br><small>Soins Obstétricaux</small></div>
+        <div class="box">ABM<br><small>Biologie Médicale</small></div>
+        <div class="box">AHA<br><small>Hygiène & Assainissement</small></div>
+        <div class="box">AIM<br><small>Imagerie Médicale</small></div>
+        <div class="box">APGP<br><small>Préparateur & Gestionnaire</small></div>
       </div>
     </div>
-
-    <!-- Section Démarche -->
-    <div class="section-card">
-      <h2>Comment ça fonctionne ?</h2>
-      <ol class="step-list">
-        <li><strong>Inscription :</strong> Remplissez le formulaire en ligne avec vos coordonnées exactes.</li>
-        <li><strong>Paiement :</strong> Effectuez le règlement de votre adhésion et/ou mensualité.</li>
-        <li><strong>Validation & Accès :</strong> Une fois le paiement vérifié, vous recevrez le lien pour demander à rejoindre le groupe Telegram privé correspondant à votre spécialité.</li>
+    <div class="card">
+      <h2>Comment s'inscrire</h2>
+      <ol>
+        <li>Remplir le formulaire</li>
+        <li>Payer l'adhésion</li>
+        <li>Rejoindre Telegram</li>
       </ol>
+      <a href="https://forms.google.com" class="btn">Commencer l'inscription</a>
     </div>
-
-    <!-- Bouton d'action principal -->
-    <div class="section-card" style="text-align: center;">
-      <h2>Inscriptions Ouvertes</h2>
-      <p>Cliquez ci-dessous pour vous inscrire et accéder aux groupes de travail.</p>
-      
-      <a href="https://forms.google.com" target="_blank" class="btn">Commencer l'inscription</a>
-    </div>
-
   </div>
-
-  <footer>
-    &copy; Groupe d'Étude Trésor - Tous droits réservés.
-  </footer>
-
 </body>
 </html>
