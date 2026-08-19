@@ -60,13 +60,85 @@
   </header>
 
   <div class="container">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groupe d'Étude Trésor - Prépa DE</title>
+  <style>
+    :root { 
+      --primary-color: #0b2b68; 
+      --wave-color: #1dc2ec; 
+      --wave-dark: #009ec5;
+      --btn-green: #28a745; 
+      --bg-color: #f4f6f8; 
+    }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background-color: var(--bg-color); color: #333; }
+    
+    header { 
+      background: linear-gradient(135deg, #0b2b68 0%, #164292 100%); 
+      color: white; 
+      padding: 25px 15px; 
+      text-align: center; 
+    }
+    
+    .logo {
+      max-width: 120px;
+      height: auto;
+      border-radius: 50%;
+      background-color: white;
+      padding: 5px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
 
-    <!-- Section 1 : Inscription & Paiements -->
+    header h1 { margin: 0; font-size: 22px; font-weight: 700; }
+    header p { margin: 5px 0 0 0; opacity: 0.9; font-size: 14px; }
+    .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+    .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    h2 { color: #111; font-size: 18px; border-bottom: 2px solid var(--bg-color); padding-bottom: 8px; margin-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 10px; }
+    .box { background: #f8f9fa; border: 1px solid #e9ecef; padding: 10px; text-align: center; border-radius: 6px; font-size: 14px; }
+    
+    .price-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+    .price-table th, .price-table td { text-align: left; padding: 12px 8px; border-bottom: 1px solid #eee; vertical-align: middle; }
+    .price-table th { background-color: #f8f9fa; font-weight: bold; }
+    
+    .wave-btn {
+      display: inline-block;
+      background-color: var(--wave-color);
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 13px;
+      text-align: center;
+      transition: background-color 0.2s;
+      box-shadow: 0 2px 4px rgba(29, 194, 236, 0.3);
+    }
+    .wave-btn:active { background-color: var(--wave-dark); }
+    .btn { display: block; width: 100%; padding: 14px 0; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px; box-sizing: border-box; }
+    .btn-forms { background-color: var(--btn-green); color: white; font-size: 16px; }
+    ol { padding-left: 20px; line-height: 1.6; }
+    .note { font-size: 12px; color: #666; margin-top: 8px; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Le fichier est bien ici -->
+    <img src="IMG_20260819_155745_526.jpg" alt="Logo Groupe d'Étude Trésor" class="logo">
+    <h1>Groupe d'Étude Trésor</h1>
+    <p>Préparation aux Examens du Diplôme d'État</p>
+  </header>
+
+  <div class="container">
     <div class="card">
-      <h2>Inscription & Paiements</h2>
+      <h2>Inscription & Programmes</h2>
       <p><strong>1. Auxiliaire Polyvalent</strong></p>
       <div class="box">Auxiliaire Polyvalent</div>
-
       <p style="margin-top:20px;"><strong>2. Auxiliaires Spécialisés</strong></p>
       <div class="grid">
         <div class="box"><strong>ASI</strong><br><small>Soins Infirmiers</small></div>
@@ -78,64 +150,38 @@
       </div>
     </div>
 
-    <!-- Section 2 : Tarifs avec boutons Wave directement intégrés -->
     <div class="card">
       <h2>Tarifs & Modalités de Paiement</h2>
       <p style="font-size: 13px; color: #555;">Cliquez directement sur un tarif ci-dessous pour effectuer le paiement via <strong>Wave</strong> :</p>
-      
       <table class="price-table">
         <thead>
-          <tr>
-            <th>Filière</th>
-            <th>Adhésion</th>
-            <th>Mensualité</th>
-          </tr>
+          <tr><th>Filière</th><th>Adhésion</th><th>Mensualité</th></tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Auxiliaire Polyvalent</strong></td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 3 500 F 🌊
-              </a>
-            </td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 1 500 F 🌊
-              </a>
-            </td>
+            <td><a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">Payer 3 500 F 🌊</a></td>
+            <td><a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">Payer 1 500 F 🌊</a></td>
           </tr>
           <tr>
             <td><strong>Auxiliaires Spécialisés</strong></td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 5 000 F 🌊
-              </a>
-            </td>
-            <td>
-              <a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">
-                Payer 2 000 F 🌊
-              </a>
-            </td>
+            <td><a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">Payer 5 000 F 🌊</a></td>
+            <td><a href="https://ci.mmapp.wave.com/web/referrals/c/EOOMH" target="_blank" class="wave-btn">Payer 2 000 F 🌊</a></td>
           </tr>
         </tbody>
       </table>
       <p class="note">* Un clic sur un bouton bleu ouvre automatiquement votre application Wave.</p>
     </div>
 
-    <!-- Section 3 : Procédure globale -->
     <div class="card">
       <h2>Comment s'inscrire</h2>
       <ol>
         <li>Remplissez le formulaire d'inscription ci-dessous.</li>
-        <li>Effectuez le paiement de votre adhésion en cliquant sur le tarif correspondant dans le tableau ci-dessus.</li>
+        <li>Effectuez le paiement de votre adhésion en cliquant sur le tarif correspondant.</li>
         <li>Rejoignez ensuite le groupe Telegram d'étude.</li>
       </ol>
-
       <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn btn-forms">Remplir le formulaire d'inscription</a>
     </div>
-
   </div>
-
 </body>
 </html>
