@@ -3,35 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groupe d'Étude Trésor - Paiement Mensualité</title>
+    <title>MENSUALITÉS - Groupe d'Étude Trésor</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: system-ui, -apple-system, sans-serif; background-color: #f4f6f8; color: #1a202c; padding-bottom: 2rem; }
 
         header { background: #0b2b68; color: #ffffff; padding: 1.5rem 1rem; text-align: center; }
         .logo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem; display: block; }
-        h1 { font-size: 1.2rem; font-weight: 700; }
-        .subtitle { font-size: 0.85rem; opacity: 0.9; margin-top: 0.2rem; }
+        h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
 
-        .container { max-width: 480px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: #ffffff; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .container { max-width: 480px; margin: 1.5rem auto; padding: 0 1rem; }
+        .card { background: #ffffff; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.2rem; }
         
-        .form-title { font-size: 1.2rem; font-weight: 800; color: #0b2b68; margin-bottom: 1rem; text-align: center; }
+        .section-title { font-size: 1rem; font-weight: 800; color: #0b2b68; margin-bottom: 0.4rem; text-transform: uppercase; }
+        .filieres { font-size: 0.85rem; font-weight: 700; color: #4a5568; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
+        .tarif-box { background: #eef2f7; padding: 0.6rem; border-radius: 6px; text-align: center; font-weight: 700; color: #0b2b68; font-size: 1.05rem; }
         
-        iframe { width: 100%; height: 650px; border: none; border-radius: 8px; }
+        iframe { width: 100%; height: 650px; border: none; border-radius: 8px; margin-top: 1rem; }
     </style>
 </head>
 <body>
 
     <header>
         <img src="IMG_20260819_155745_526.jpg" alt="Logo" class="logo">
-        <h1>Groupe d'Étude Trésor</h1>
-        <p class="subtitle">Règlement des Mensualités</p>
+        <h1>MENSUALITÉS</h1>
     </header>
 
     <main class="container">
+        <!-- SECTION 1 -->
         <div class="card">
-            <h2 class="form-title">Formulaire de Mensualité</h2>
+            <h2 class="section-title">AUXILIAIRE POLYVALENT</h2>
+            <div class="tarif-box">Mois : 1 515 f</div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="card">
+            <h2 class="section-title">AUXILIAIRES SPÉCIALISÉS</h2>
+            <p class="filieres">AIM — APGP — ABM — AHA — ASI — ASO</p>
+            <div class="tarif-box">Mois : 2 220 f</div>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <div class="card">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdCKYGRD299VITIZMgd2EdC2ElwbKAmWrEUgfQWzVSlfNsObA/viewform?embedded=true">Chargement...</iframe>
         </div>
     </main>
