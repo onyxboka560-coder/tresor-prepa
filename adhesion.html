@@ -17,9 +17,23 @@
         
         .section-title { font-size: 1rem; font-weight: 800; color: #0b2b68; margin-bottom: 0.4rem; text-transform: uppercase; }
         .filieres { font-size: 0.85rem; font-weight: 700; color: #4a5568; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
-        .tarif-box { background: #eef2f7; padding: 0.6rem; border-radius: 6px; text-align: center; font-weight: 700; color: #28a745; font-size: 1.05rem; }
         
-        iframe { width: 100%; height: 650px; border: none; border-radius: 8px; margin-top: 1rem; }
+        .btn-wave {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #1dc4e9;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            box-shadow: 0 2px 5px rgba(29, 196, 233, 0.3);
+        }
+
+        iframe { width: 100%; height: 650px; border: none; border-radius: 8px; margin-top: 0.5rem; }
     </style>
     <script>
         if (localStorage.getItem("tresor_adhesion_validee") === "true") {
@@ -38,17 +52,21 @@
         <!-- SECTION 1 -->
         <div class="card">
             <h2 class="section-title">AUXILIAIRE POLYVALENT</h2>
-            <div class="tarif-box">Adhésion : 3 535 f</div>
+            <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3535" class="btn-wave" target="_blank">
+                🌊 Payer l'Adhésion : 3 535 f
+            </a>
         </div>
 
         <!-- SECTION 2 -->
         <div class="card">
             <h2 class="section-title">AUXILIAIRES SPÉCIALISÉS</h2>
             <p class="filieres">AIM — APGP — ABM — AHA — ASO — ASI</p>
-            <div class="tarif-box">Adhésion : 5 050 f</div>
+            <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=5050" class="btn-wave" target="_blank">
+                🌊 Payer l'Adhésion : 5 050 f
+            </a>
         </div>
 
-        <!-- FORMULAIRE -->
+        <!-- FORMULAIRE Google Forms d'ADHÉSION -->
         <div class="card">
             <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLScyMOnz8GqI-yJpB-fU8I5CkW2B5vYkKpxM1uL5ZfX1kP2A3g/viewform?embedded=true">Chargement...</iframe>
         </div>
