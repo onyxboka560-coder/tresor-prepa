@@ -372,6 +372,233 @@
               <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3500" target="_blank" class="btn-pay-wave">
                 Payer 3 500 F 🌊
               </a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groupe d'Étude Trésor - Prépa DE INFAS</title>
+  <style>
+    :root { 
+      --primary-color: #0b2b68; 
+      --wave-color: #1dc2ec; 
+      --btn-green: #28a745; 
+      --telegram-blue: #0088cc;
+      --bg-color: #f4f6f8; 
+    }
+
+    * { 
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;
+    }
+
+    body { 
+      font-family: system-ui, -apple-system, sans-serif; 
+      background-color: var(--bg-color); 
+      color: #333; 
+      overflow-x: hidden; 
+    }
+    
+    /* HEADER UNIQUE */
+    header { 
+      background: linear-gradient(135deg, #0b2b68 0%, #164292 100%); 
+      color: white; 
+      padding: 25px 15px; 
+      text-align: center; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    }
+
+    .logo { 
+      width: 90px; 
+      height: 90px;
+      object-fit: contain;
+      border-radius: 50%; 
+      background-color: white; 
+      padding: 4px; 
+      margin: 0 auto 10px auto; 
+      display: block; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    }
+
+    header h1 {
+      font-size: 19px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    header p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .container { 
+      max-width: 600px; 
+      margin: 20px auto; 
+      padding: 0 15px; 
+    }
+
+    .card { 
+      background: white; 
+      padding: 20px; 
+      margin-bottom: 20px; 
+      border-radius: 12px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+    }
+
+    h2 { 
+      color: var(--primary-color); 
+      font-size: 17px; 
+      border-bottom: 2px solid #eef2f5; 
+      padding-bottom: 10px; 
+      margin-bottom: 15px;
+    }
+
+    /* Grille des filières */
+    .grid-filiere {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .filiere-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    /* Tableau des tarifs & Boutons Wave */
+    .price-table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      font-size: 13px; 
+    }
+
+    .price-table th, .price-table td { 
+      text-align: center; 
+      padding: 10px 4px; 
+      border-bottom: 1px solid #eee; 
+      vertical-align: middle;
+    }
+
+    .price-table th {
+      background-color: #f8fafc;
+      color: var(--primary-color);
+      text-align: left;
+    }
+
+    .price-table td:first-child {
+      text-align: left;
+    }
+
+    .btn-pay-wave {
+      display: inline-block;
+      background-color: var(--wave-color);
+      color: white;
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      white-space: nowrap;
+    }
+
+    /* Boutons d'action principaux */
+    .btn { 
+      display: block; 
+      width: 100%; 
+      padding: 14px 0; 
+      text-align: center; 
+      text-decoration: none; 
+      border-radius: 8px; 
+      font-weight: bold; 
+      margin-top: 15px; 
+      border: none; 
+      cursor: pointer; 
+      font-size: 14px; 
+    }
+
+    .btn-forms { background-color: var(--btn-green); color: white; }
+    .btn-telegram { background-color: var(--telegram-blue); color: white; }
+    .btn-verify { background-color: var(--primary-color); color: white; }
+
+    ol { padding-left: 20px; line-height: 1.6; font-size: 13px; }
+    .note { font-size: 12px; color: #d9534f; font-weight: bold; margin-top: 15px; }
+
+    /* Étapes masquées */
+    #step-verification { 
+      display: none; 
+      margin-top: 20px; 
+      padding-top: 15px; 
+      border-top: 2px dashed #e2e8f0; 
+    }
+
+    #step-telegram { 
+      display: none; 
+      margin-top: 20px; 
+      padding-top: 15px; 
+      border-top: 2px dashed #28a745; 
+    }
+
+    input[type="text"] { 
+      width: 100%; 
+      padding: 12px; 
+      margin-top: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 6px; 
+      font-size: 14px; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="IMG_20260819_155745_526.jpg" alt="Logo Groupe d'Étude Trésor" class="logo">
+    <h1>Groupe d'Étude Trésor</h1>
+    <p>Préparation aux examens du diplôme d'État INFAS</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Filières</h2>
+      <div class="grid-filiere">
+        <div class="filiere-item">Auxiliaire Polyvalent</div>
+        <div class="filiere-item">Auxiliaires Spécialisés</div>
+        <div class="filiere-item">ASI / ASO</div>
+        <div class="filiere-item">ABM</div>
+        <div class="filiere-item">APGP</div>
+        <div class="filiere-item">AIM</div>
+        <div class="filiere-item">AHA</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Tarifs & Paiement Direct Wave</h2>
+      <p style="font-size: 12px; color: #666; margin-bottom: 12px;">Cliquez sur le bouton bleu pour ouvrir directement Wave :</p>
+      
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Filières</th>
+            <th>Adhésion</th>
+            <th>Mensualité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Polyvalent</strong></td>
+            <td>
+              <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3500" target="_blank" class="btn-pay-wave">
+                Payer 3 500 F 🌊
+              </a>
             </td>
             <td>
               <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=1500" target="_blank" class="btn-pay-wave">
@@ -380,7 +607,7 @@
             </td>
           </tr>
           <tr>
-            <td><strong>Aux. Spécialisés</strong></td>
+            <td><strong>Spécialisés</strong></td>
             <td>
               <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=5000" target="_blank" class="btn-pay-wave">
                 Payer 5 000 F 🌊
@@ -400,8 +627,8 @@
       <h2>Procédure d'inscription</h2>
       <ol>
         <li>Effectuez votre paiement via les boutons Wave ci-dessus.</li>
-        <li>Cliquez ci-dessous pour remplir le formulaire d'inscription officiel.</li>
-        <li>Saisissez le numéro de transaction Wave reçu pour afficher le contact Telegram.</li>
+        <li>Cliquez ci-dessous pour remplir le formulaire d'inscription.</li>
+        <li>Saisissez le numéro de transaction Wave reçu pour débloquer le contact Telegram.</li>
       </ol>
 
       <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn btn-forms" target="_blank" onclick="showNextStep()">
@@ -415,7 +642,7 @@
       </div>
 
       <div id="step-telegram">
-        <p style="color: #28a745; font-weight: bold; font-size: 14px; margin: 0;">✅ Étape validée ! Cliquez ci-dessous pour contacter la coordination :</p>
+        <p style="color: #28a745; font-weight: bold; font-size: 13px; margin: 0;">✅ Étape validée ! Cliquez ci-dessous pour contacter la coordination :</p>
         <a href="https://t.me/Tresor_Prepa_INFAS" class="btn btn-telegram" target="_blank">
           Rejoindre l'administration sur Telegram
         </a>
@@ -445,4 +672,3 @@
 
 </body>
 </html>
-
