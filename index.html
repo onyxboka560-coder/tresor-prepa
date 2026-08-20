@@ -3,36 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groupe d'Étude Trésor</title>
+    <title>Groupe d'Étape Trésor - Accueil</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #2d3436; background: #f8f9fa; }
+        body { font-family: system-ui, -apple-system, sans-serif; background-color: #f4f6f8; color: #1a202c; padding-bottom: 2rem; }
 
-        header { background: #0b2b68; color: #ffffff; padding: 2rem 1rem; text-align: center; }
-        .logo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; display: block; }
-        h1 { font-size: 1.25rem; font-weight: 700; }
-        .subtitle { font-size: 0.9rem; opacity: 0.8; }
+        header { background: #0b2b68; color: #ffffff; padding: 1.5rem 1rem; text-align: center; }
+        .logo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem; display: block; }
+        h1 { font-size: 1.2rem; font-weight: 700; }
+        .subtitle { font-size: 0.85rem; opacity: 0.9; margin-top: 0.2rem; }
 
-        .container { max-width: 500px; margin: 2rem auto; padding: 0 1rem; }
-        section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
-        h2 { font-size: 1.1rem; color: #0b2b68; margin-bottom: 1rem; border-bottom: 2px solid #f1f3f5; padding-bottom: 0.5rem; }
-
-        /* STRUCTURE FILIÈRES */
-        .filiere-block { margin-bottom: 15px; }
-        .filiere-main { background: #e9ecef; padding: 1rem; text-align: center; border-radius: 4px; font-weight: 700; color: #0b2b68; margin-bottom: 5px; }
+        .container { max-width: 480px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); text-align: center; }
         
-        .grid-sub { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-        .tag-sub { background: #f1f3f5; padding: 0.6rem; text-align: center; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+        .main-title { font-size: 1.2rem; font-weight: 800; color: #0b2b68; margin-bottom: 1rem; }
+        .desc { font-size: 0.9rem; color: #4a5568; margin-bottom: 1.5rem; line-height: 1.4; }
 
-        /* TABLEAU PAIEMENT */
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
-        th { text-align: left; color: #636e72; padding: 0.5rem; }
-        td { padding: 0.5rem; border-top: 1px solid #eee; }
-        .btn-wave { display: block; background: #1dc2ec; color: white; text-align: center; padding: 0.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
-        .btn-main { display: block; width: 100%; background: #28a745; color: white; text-align: center; padding: 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
-        .input-group { margin-top: 1rem; display: none; }
-        input { width: 100%; padding: 0.8rem; border: 1px solid #ced4da; border-radius: 4px; margin-top: 0.5rem; }
-        .hidden-section { display: none; margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 4px; text-align: center; }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; }
+        .btn { display: block; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; color: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .btn-adhesion { background-color: #28a745; }
+        .btn-mensualite { background-color: #0b2b68; }
     </style>
 </head>
 <body>
@@ -44,77 +34,16 @@
     </header>
 
     <main class="container">
-        
-        <section>
-            <h2>Filières</h2>
+        <div class="card">
+            <h2 class="main-title">Bienvenue sur la plateforme</h2>
+            <p class="desc">Sélectionnez l'option souhaitée pour effectuer votre paiement et finaliser votre inscription.</p>
             
-            <!-- Ligne 1 : Polyvalent -->
-            <div class="filiere-block">
-                <div class="filiere-main">Auxiliaire Polyvalent</div>
+            <div class="btn-group">
+                <a href="adhesion.html" class="btn btn-adhesion">Accéder à la page Adhésion</a>
+                <a href="mensualite.html" class="btn btn-mensualite">Accéder aux Mensualités</a>
             </div>
-
-            <!-- Ligne 2 : Spécialisés + sous-filières -->
-            <div class="filiere-block">
-                <div class="filiere-main">Auxiliaires Spécialisés</div>
-                <div class="grid-sub">
-                    <div class="tag-sub">ASI</div>
-                    <div class="tag-sub">ABM</div>
-                    <div class="tag-sub">APGP</div>
-                    <div class="tag-sub">AHA</div>
-                    <div class="tag-sub">AIM</div>
-                    <div class="tag-sub">ASO</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Paiement Wave</h2>
-            <table>
-                <tr>
-                    <th>Filière</th>
-                    <th>Adhésion</th>
-                    <th>Mensualité</th>
-                </tr>
-                <tr>
-                    <td><strong>Polyvalent</strong></td>
-                    <td><a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3535" class="btn-wave">3 535 F</a></td>
-                    <td><a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=1515" class="btn-wave">1 515 F</a></td>
-                </tr>
-                <tr>
-                    <td><strong>Spécialisés</strong></td>
-                    <td><a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=5050" class="btn-wave">5 050 F</a></td>
-                    <td><a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=2020" class="btn-wave">2 020 F</a></td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <h2>Inscription</h2>
-            <p style="font-size: 0.9rem;">1. Payez via Wave.<br>2. Remplissez le formulaire :</p>
-            <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn-main" onclick="document.getElementById('verify').style.display='block';">1. Remplir le formulaire</a>
-            
-            <div id="verify" class="input-group">
-                <label style="font-size: 0.9rem; font-weight: bold;">Saisissez votre numéro de transaction Wave :</label>
-                <input type="text" id="tx-id" placeholder="Ex: T_123456789">
-                <button class="btn-main" style="background:#0b2b68;" onclick="validate()">Valider</button>
-            </div>
-
-            <div id="telegram-link" class="hidden-section">
-                <p style="font-weight:bold; color: #2e7d32;">Transaction validée.</p>
-                <a href="https://t.me/Tresor_Prepa_INFAS" style="color: #0b2b68; font-weight: bold;">Rejoindre le groupe Telegram</a>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <script>
-        function validate() {
-            const val = document.getElementById('tx-id').value;
-            if(val.length > 5) {
-                document.getElementById('telegram-link').style.display = 'block';
-            } else {
-                alert('Veuillez entrer un numéro de transaction valide.');
-            }
-        }
-    </script>
 </body>
 </html>
