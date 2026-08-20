@@ -158,6 +158,181 @@
 <body>
 
   <header>
+    <img src="IMG_20260819_155745_526.jpg" alt="Logo<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groupe d'Étude Trésor - Prépa DE INFAS</title>
+  <style>
+    :root { 
+      --primary-color: #0b2b68; 
+      --wave-color: #1dc2ec; 
+      --btn-green: #28a745; 
+      --telegram-blue: #0088cc;
+      --bg-color: #f4f6f8; 
+    }
+
+    * { box-sizing: border-box; }
+
+    body { 
+      font-family: system-ui, -apple-system, sans-serif; 
+      margin: 0; 
+      background-color: var(--bg-color); 
+      color: #333; 
+    }
+    
+    header { 
+      background: linear-gradient(135deg, #0b2b68 0%, #164292 100%); 
+      color: white; 
+      padding: 30px 15px; 
+      text-align: center; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    }
+
+    .logo { 
+      max-width: 120px; 
+      border-radius: 50%; 
+      background-color: white; 
+      padding: 4px; 
+      margin: 0 auto 15px auto; 
+      display: block; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    }
+
+    .container { 
+      max-width: 700px; 
+      margin: 20px auto; 
+      padding: 0 15px; 
+    }
+
+    .card { 
+      background: white; 
+      padding: 20px; 
+      margin-bottom: 20px; 
+      border-radius: 12px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+    }
+
+    h2 { 
+      color: var(--primary-color); 
+      font-size: 18px; 
+      border-bottom: 2px solid #eef2f5; 
+      padding-bottom: 10px; 
+      margin-top: 0; 
+    }
+
+    /* Grille des filières */
+    .grid-filiere {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .filiere-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .filiere-item strong {
+      display: block;
+      color: var(--primary-color);
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    /* Tableau des tarifs & Boutons Wave */
+    .price-table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-top: 10px; 
+      font-size: 14px; 
+    }
+
+    .price-table th, .price-table td { 
+      text-align: left; 
+      padding: 10px 5px; 
+      border-bottom: 1px solid #eee; 
+      vertical-align: middle;
+    }
+
+    .price-table th {
+      background-color: #f8fafc;
+      color: var(--primary-color);
+    }
+
+    .btn-pay-wave {
+      display: inline-block;
+      background-color: var(--wave-color);
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 13px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.1s;
+    }
+
+    .btn-pay-wave:active {
+      transform: scale(0.98);
+    }
+
+    /* Boutons d'action principaux */
+    .btn { 
+      display: block; 
+      width: 100%; 
+      padding: 14px 0; 
+      text-align: center; 
+      text-decoration: none; 
+      border-radius: 8px; 
+      font-weight: bold; 
+      margin-top: 15px; 
+      border: none; 
+      cursor: pointer; 
+      font-size: 15px; 
+    }
+
+    .btn-forms { background-color: var(--btn-green); color: white; }
+    .btn-telegram { background-color: var(--telegram-blue); color: white; }
+    .btn-verify { background-color: var(--primary-color); color: white; }
+
+    ol { padding-left: 20px; line-height: 1.6; font-size: 14px; }
+    .note { font-size: 13px; color: #d9534f; font-weight: bold; margin-top: 15px; }
+
+    /* Étapes masquees */
+    #step-verification { 
+      display: none; 
+      margin-top: 20px; 
+      padding-top: 15px; 
+      border-top: 2px dashed #e2e8f0; 
+    }
+
+    #step-telegram { 
+      display: none; 
+      margin-top: 20px; 
+      padding-top: 15px; 
+      border-top: 2px dashed #28a745; 
+    }
+
+    input[type="text"] { 
+      width: 100%; 
+      padding: 12px; 
+      margin-top: 10px; 
+      border: 1px solid #ccc; 
+      border-radius: 6px; 
+      font-size: 15px; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
     <img src="IMG_20260819_155745_526.jpg" alt="Logo Groupe d'Étude Trésor" class="logo">
     <div style="font-size: 22px; font-weight: 800; text-transform: uppercase;">Groupe d'Étude Trésor</div>
     <div style="font-size: 14px; opacity: 0.9; margin-top: 5px;">Préparation aux examens du diplôme d'État INFAS</div>
@@ -179,25 +354,43 @@
     </div>
 
     <div class="card">
-      <h2>Tarifs d'Adhésion</h2>
+      <h2>Tarifs & Paiement Direct Wave</h2>
+      <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Cliquez sur le bouton bleu du montant souhaité pour ouvrir Wave et régler en toute sécurité :</p>
+      
       <table class="price-table">
         <thead>
           <tr>
-            <th>Filières</th>
+            <th>Filière</th>
             <th>Adhésion</th>
             <th>Mensualité</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Auxiliaire Polyvalent</strong></td>
-            <td>3 500 FCFA</td>
-            <td>1 500 FCFA</td>
+            <td><strong>Aux. Polyvalent</strong></td>
+            <td>
+              <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3500" target="_blank" class="btn-pay-wave">
+                Payer 3 500 F 🌊
+              </a>
+            </td>
+            <td>
+              <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=1500" target="_blank" class="btn-pay-wave">
+                Payer 1 500 F 🌊
+              </a>
+            </td>
           </tr>
           <tr>
-            <td><strong>Auxiliaires Spécialisés</strong></td>
-            <td>5 000 FCFA</td>
-            <td>2 000 FCFA</td>
+            <td><strong>Aux. Spécialisés</strong></td>
+            <td>
+              <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=5000" target="_blank" class="btn-pay-wave">
+                Payer 5 000 F 🌊
+              </a>
+            </td>
+            <td>
+              <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=2000" target="_blank" class="btn-pay-wave">
+                Payer 2 000 F 🌊
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -206,13 +399,13 @@
     <div class="card">
       <h2>Procédure d'inscription</h2>
       <ol>
-        <li>Effectuez votre paiement Wave au numéro de la coordination.</li>
-        <li>Remplissez le formulaire d'inscription officiel ci-dessous.</li>
-        <li>Saisissez votre numéro de transaction Wave pour afficher le contact Telegram.</li>
+        <li>Effectuez votre paiement via les boutons Wave ci-dessus.</li>
+        <li>Cliquez ci-dessous pour remplir le formulaire d'inscription officiel.</li>
+        <li>Saisissez le numéro de transaction Wave reçu pour afficher le contact Telegram.</li>
       </ol>
 
       <a href="https://forms.gle/kqLYx22ZQzm7rx2K6" class="btn btn-forms" target="_blank" onclick="showNextStep()">
-        1. Effectuer le paiement & Remplir le Formulaire
+        1. Remplir le Formulaire d'Inscription
       </a>
 
       <div id="step-verification">
@@ -222,13 +415,13 @@
       </div>
 
       <div id="step-telegram">
-        <p style="color: #28a745; font-weight: bold; font-size: 14px; margin: 0;">✅ Étape validée ! Cliquez ci-dessous pour rejoindre l'administration :</p>
+        <p style="color: #28a745; font-weight: bold; font-size: 14px; margin: 0;">✅ Étape validée ! Cliquez ci-dessous pour contacter la coordination :</p>
         <a href="https://t.me/Tresor_Prepa_INFAS" class="btn btn-telegram" target="_blank">
           Rejoindre l'administration sur Telegram
         </a>
       </div>
 
-      <p class="note">⚠️ L'accès final au groupe d'étude sera validé uniquement après vérification du numéro de transaction par l'administration.</p>
+      <p class="note">⚠️ L'accès final au groupe d'étude sera validé uniquement après vérification de votre paiement par l'administration.</p>
     </div>
 
   </div>
@@ -252,3 +445,4 @@
 
 </body>
 </html>
+
