@@ -3,74 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groupe d'Étude Trésor - Adhésion</title>
+    <title>ADHÉSION - Groupe d'Étude Trésor</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: system-ui, -apple-system, sans-serif; background-color: #f4f6f8; color: #1a202c; padding-bottom: 2rem; }
 
         header { background: #0b2b68; color: #ffffff; padding: 1.5rem 1rem; text-align: center; }
         .logo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem; display: block; }
-        h1 { font-size: 1.2rem; font-weight: 700; }
-        .subtitle { font-size: 0.85rem; opacity: 0.9; margin-top: 0.2rem; }
+        h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
 
-        .container { max-width: 480px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: #ffffff; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .container { max-width: 480px; margin: 1.5rem auto; padding: 0 1rem; }
+        .card { background: #ffffff; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.2rem; }
         
-        .form-title { font-size: 1.2rem; font-weight: 800; color: #28a745; margin-bottom: 1rem; text-align: center; }
+        .section-title { font-size: 1rem; font-weight: 800; color: #0b2b68; margin-bottom: 0.4rem; text-transform: uppercase; }
+        .filieres { font-size: 0.85rem; font-weight: 700; color: #4a5568; margin-bottom: 0.6rem; letter-spacing: 0.5px; }
+        .tarif-box { background: #eef2f7; padding: 0.6rem; border-radius: 6px; text-align: center; font-weight: 700; color: #28a745; font-size: 1.05rem; }
         
-        iframe { width: 100%; height: 650px; border: none; border-radius: 8px; }
-        
-        .btn-mensualite {
-            display: inline-block;
-            background-color: #0b2b68;
-            color: #ffffff;
-            padding: 14px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            margin-top: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+        iframe { width: 100%; height: 650px; border: none; border-radius: 8px; margin-top: 1rem; }
     </style>
+    <script>
+        if (localStorage.getItem("tresor_adhesion_validee") === "true") {
+            window.location.href = "mensualite.html";
+        }
+    </script>
 </head>
 <body>
 
     <header>
         <img src="IMG_20260819_155745_526.jpg" alt="Logo" class="logo">
-        <h1>Groupe d'Étude Trésor</h1>
-        <p class="subtitle">Fiche d'Adhésion Officielle</p>
+        <h1>ADHÉSION</h1>
     </header>
 
     <main class="container">
-        <div class="card" id="content-block">
-            <h2 class="form-title">Formulaire d'Adhésion</h2>
-            <iframe id="adhesion-form" src="https://docs.google.com/forms/d/e/1FAIpQLSf6wVdDEXydJ4MRpVrnztgq_GWtTf4b2p4Acoomb2jWE0I6_g/viewform?embedded=true">Chargement...</iframe>
+        <!-- SECTION 1 -->
+        <div class="card">
+            <h2 class="section-title">AUXILIAIRE POLYVALENT</h2>
+            <div class="tarif-box">Adhésion : 3 535 f</div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="card">
+            <h2 class="section-title">AUXILIAIRES SPÉCIALISÉS</h2>
+            <p class="filieres">AIM — APGP — ABM — AHA — ASO — ASI</p>
+            <div class="tarif-box">Adhésion : 5 050 f</div>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <div class="card">
+            <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLScyMOnz8GqI-yJpB-fU8I5CkW2B5vYkKpxM1uL5ZfX1kP2A3g/viewform?embedded=true">Chargement...</iframe>
         </div>
     </main>
 
     <script>
-        // 1. Vérification si l'adhésion a déjà été effectuée sur cet appareil
-        if (localStorage.getItem('tresor_adhesion_validee') === 'true') {
-            const container = document.getElementById('content-block');
-            container.innerHTML = `
-                <div style="text-align: center; padding: 15px 5px;">
-                    <h2 style="color: #0b2b68; margin-bottom: 12px; font-size: 1.3rem;">Adhésion déjà enregistrée !</h2>
-                    <p style="color: #4a5568; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.4;">
-                        Vous avez déjà soumis votre fiche d'adhésion au Groupe d'Étude Trésor. 
-                        Pour effectuer vos versements mensuels, rendez-vous sur la page des mensualités.
-                    </p>
-                    <a href="mensualite.html" class="btn-mensualite">
-                        Payer ma mensualité
-                    </a>
-                </div>
-            `;
-        }
-
-        // 2. Marquer l'adhésion comme effectuée lors de l'interaction avec le formulaire
-        window.addEventListener('blur', function() {
-            if (document.activeElement === document.getElementById('adhesion-form')) {
-                localStorage.setItem('tresor_adhesion_validee', 'true');
+        const formIframe = document.getElementById("googleForm");
+        formIframe.addEventListener("load", function() {
+            formIframe.contentWindow.postMessage("check", "*");
+        });
+        window.addEventListener("blur", function() {
+            if (document.activeElement === formIframe) {
+                localStorage.setItem("tresor_adhesion_validee", "true");
             }
         });
     </script>
