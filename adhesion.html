@@ -33,7 +33,6 @@
             box-shadow: 0 2px 5px rgba(29, 196, 233, 0.3);
         }
 
-        /* STYLE DU FORMULAIRE PERSONNALISÉ (EXACTEMENT COMME SUR LA CAPTURE) */
         .form-title { font-size: 1.2rem; font-weight: 700; color: #0b2b68; margin-bottom: 1rem; border-bottom: 1px solid #edf2f7; padding-bottom: 0.5rem; }
         .instruction { font-size: 0.95rem; color: #2d3748; margin-bottom: 0.6rem; font-weight: 500; }
         
@@ -81,6 +80,26 @@
             border: none;
             cursor: pointer;
         }
+
+        .telegram-box {
+            display: none;
+            margin-top: 1.2rem;
+            padding: 1rem;
+            background-color: #e6fffa;
+            border: 1px solid #319795;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .telegram-btn {
+            display: block;
+            margin-top: 0.8rem;
+            padding: 12px;
+            background-color: #0088cc;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+        }
     </style>
     <script>
         if (localStorage.getItem("tresor_adhesion_validee") === "true") {
@@ -113,7 +132,7 @@
             </a>
         </div>
 
-        <!-- BLOC FORMULAIRE D'INSCRIPTION SUR MESURE -->
+        <!-- BLOC FORMULAIRE D'INSCRIPTION -->
         <div class="card">
             <h3 class="form-title">Inscription</h3>
 
@@ -130,6 +149,14 @@
 
                 <button type="submit" class="btn-valider">Valider</button>
             </form>
+
+            <!-- BLOC TELEGRAM PRIVE -->
+            <div id="telegramBox" class="telegram-box">
+                <p style="color: #234e52; font-weight: 600;">✅ Transaction enregistrée avec succès !</p>
+                <a href="https://t.me/Tresor_Prepa_INFAS" class="telegram-btn" target="_blank">
+                    ✈️ Rejoindre le groupe privé Telegram
+                </a>
+            </div>
         </div>
     </main>
 
@@ -139,12 +166,10 @@
             const tx = document.getElementById("txNum").value.trim();
             if (tx) {
                 localStorage.setItem("tresor_adhesion_validee", "true");
-                alert("Transaction enregistrée avec succès !");
-                window.location.href = "mensualite.html";
+                document.getElementById("telegramBox").style.display = "block";
             }
         }
     </script>
 
 </body>
-                    </html>
-                    
+</html>
