@@ -1,175 +1,275 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADHÉSION - Groupe d'Étude Trésor</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f6f8; color: #1a202c; padding-bottom: 2rem; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRÉSOR PRÉPA DE — ADHÉSIONS</title>
+  <style>
+    :root {
+      --primary-blue: #0d2350;
+      --wave-blue: #1dc4e9;
+      --green-btn: #27ae60;
+      --bg-gray: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-color: #1a1a1a;
+    }
 
-        header { background: #0b2b68; color: #ffffff; padding: 1.5rem 1rem; text-align: center; }
-        .logo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.75rem; display: block; border: 2px solid #ffffff; }
-        h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-        .container { max-width: 480px; margin: 1.5rem auto; padding: 0 1rem; }
-        .card { background: #ffffff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1.2rem; }
-        
-        .section-title { font-size: 1.1rem; font-weight: 800; color: #0b2b68; margin-bottom: 0.5rem; text-transform: uppercase; }
-        .filieres { font-size: 0.85rem; font-weight: 700; color: #4a5568; margin-bottom: 0.8rem; letter-spacing: 0.5px; }
-        
-        .btn-wave {
-            display: block;
-            width: 100%;
-            padding: 14px;
-            background-color: #1dc4e9;
-            color: #ffffff;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1rem;
-            border-radius: 8px;
-            margin-top: 0.5rem;
-            box-shadow: 0 2px 5px rgba(29, 196, 233, 0.3);
-        }
+    body {
+      background-color: var(--bg-gray);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
 
-        .form-title { font-size: 1.2rem; font-weight: 700; color: #0b2b68; margin-bottom: 1rem; border-bottom: 1px solid #edf2f7; padding-bottom: 0.5rem; }
-        .instruction { font-size: 0.95rem; color: #2d3748; margin-bottom: 0.6rem; font-weight: 500; }
-        
-        .btn-form {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            background-color: #28a745;
-            color: #ffffff;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            border-radius: 10px;
-            margin: 1.2rem 0;
-            border: none;
-            cursor: pointer;
-        }
+    .header-container {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-        .label-input { font-size: 0.95rem; color: #2d3748; margin-bottom: 0.6rem; display: block; font-weight: 500; }
-        
-        .input-wave {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #cbd5e0;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            outline: none;
-            color: #4a5568;
-            margin-bottom: 1.2rem;
-            background-color: #ffffff;
-        }
-        .input-wave::placeholder { color: #a0aec0; }
+    .page-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-        .btn-valider {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: #0b2b68;
-            color: #ffffff;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-        }
+    .content-container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-        .telegram-box {
-            display: none;
-            margin-top: 1.2rem;
-            padding: 1rem;
-            background-color: #e6fffa;
-            border: 1px solid #319795;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .telegram-btn {
-            display: block;
-            margin-top: 0.8rem;
-            padding: 12px;
-            background-color: #0088cc;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 8px;
-        }
-    </style>
-    <script>
-        if (localStorage.getItem("tresor_adhesion_validee") === "true") {
-            window.location.href = "mensualite.html";
-        }
-    </script>
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-title {
+      color: var(--primary-blue);
+      font-size: 18px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 8px;
+    }
+
+    .instruction-list {
+      padding-left: 20px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .card-title {
+      color: var(--primary-blue);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .specialties-list {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-wave {
+      background-color: var(--wave-blue);
+      color: #ffffff;
+    }
+
+    .wave-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .btn-green {
+      background-color: var(--green-btn);
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .btn-valider {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      margin-top: 10px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary-blue);
+    }
+
+    #validation-result {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .success-box {
+      background-color: #e8f8f0;
+      border: 1px solid #2ecc71;
+      color: #27ae60;
+    }
+
+    .error-box {
+      background-color: #fde8e8;
+      border: 1px solid #e74c3c;
+      color: #c0392b;
+    }
+
+    .btn-telegram {
+      background-color: #0088cc;
+      color: #ffffff;
+      margin-top: 12px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <img src="IMG_20260819_155745_526.jpg" alt="Logo" class="logo">
-        <h1>ADHÉSION</h1>
-    </header>
+  <!-- EN-TÊTE -->
+  <header class="header-container">
+    <h1 class="page-title">TRÉSOR PRÉPA DE<br><span style="font-size: 16px; font-weight: normal;">DROIT D'ADHÉSION</span></h1>
+  </header>
 
-    <main class="container">
-        <!-- TARIF 1 -->
-        <div class="card">
-            <h2 class="section-title">AUXILIAIRE POLYVALENT</h2>
-            <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3535" class="btn-wave" target="_blank">
-                🌊 Payer l'Adhésion : 3 535 f
-            </a>
-        </div>
+  <main class="content-container">
 
-        <!-- TARIF 2 -->
-        <div class="card">
-            <h2 class="section-title">AUXILIAIRES SPÉCIALISÉS</h2>
-            <p class="filieres">AIM — APGP — ABM — AHA — ASO — ASI</p>
-            <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=5050" class="btn-wave" target="_blank">
-                🌊 Payer l'Adhésion : 5 050 f
-            </a>
-        </div>
+    <!-- SECTION 1 : RÈGLEMENT -->
+    <section class="card">
+      <h2 class="section-title">Règlement du droit d'adhésion</h2>
+      <ol class="instruction-list">
+        <li>Payez l'adhésion via Wave.</li>
+        <li>Remplissez le formulaire.</li>
+        <li>Saisissez votre numéro de transaction Wave.</li>
+      </ol>
+    </section>
 
-        <!-- BLOC FORMULAIRE D'INSCRIPTION -->
-        <div class="card">
-            <h3 class="form-title">Inscription</h3>
+    <!-- SECTION 2 : AUXILIAIRE POLYVALENT -->
+    <section class="card">
+      <h2 class="card-title">AUXILIAIRE POLYVALENT</h2>
+      <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3535" target="_blank" class="btn btn-wave">
+        <img src="https://images.squarespace-cdn.com/content/v1/601a91e5e54d31011ffcd2bc/1612371909772-L7K4O5A66O8Q3J1U644S/Wave_logo.png" alt="Wave" class="wave-icon">
+        1. Payer l'Adhésion : 3 535 f
+      </a>
+    </section>
 
-            <p class="instruction">1. Payez via Wave.</p>
-            <p class="instruction">2. Remplissez le formulaire :</p>
+    <!-- SECTION 3 : AUXILIAIRES SPÉCIALISÉS -->
+    <section class="card">
+      <h2 class="card-title">AUXILIAIRES SPÉCIALISÉS</h2>
+      <p class="specialties-list">AIM — APGP — ABM — AHA — ASI — ASO</p>
+      <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=5050" target="_blank" class="btn btn-wave">
+        <img src="https://images.squarespace-cdn.com/content/v1/601a91e5e54d31011ffcd2bc/1612371909772-L7K4O5A66O8Q3J1U644S/Wave_logo.png" alt="Wave" class="wave-icon">
+        1. Payer l'Adhésion : 5 050 f
+      </a>
+    </section>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6wVdDEXydJ4MRpVrnztgq_GWtTf4b2p4Acoomb2jWE0I6_g/viewform" class="btn-form" target="_blank">
-                1. Remplir le formulaire
-            </a>
+    <!-- SECTION 4 : FORMULAIRE ET TRANSACTION -->
+    <section class="card">
+      <a href="https://forms.google.com" target="_blank" class="btn btn-green">
+        2. Remplir le formulaire
+      </a>
 
-            <form id="adhesionForm" onsubmit="validerInscription(event)">
-                <label class="label-input" for="txNum">Saisissez votre numéro de transaction Wave :</label>
-                <input type="text" id="txNum" class="input-wave" placeholder="Ex: T_123456789" required>
+      <div class="input-group">
+        <label for="wave_transaction">3. Saisissez votre numéro de transaction Wave :</label>
+        <input 
+          type="text" 
+          id="wave_transaction" 
+          name="wave_transaction" 
+          placeholder="Ex : 0789687788" 
+          class="input-field"
+        >
+        <button type="button" class="btn btn-valider" onclick="validerTransaction()">Valider</button>
+      </div>
 
-                <button type="submit" class="btn-valider">Valider</button>
-            </form>
+      <div id="validation-result"></div>
+    </section>
 
-            <!-- BLOC TELEGRAM PRIVE -->
-            <div id="telegramBox" class="telegram-box">
-                <p style="color: #234e52; font-weight: 600;">✅ Transaction enregistrée avec succès !</p>
-                <a href="https://t.me/Tresor_Prepa_INFAS" class="telegram-btn" target="_blank">
-                    ✈️ Rejoindre le groupe privé Telegram
-                </a>
-            </div>
-        </div>
-    </main>
+  </main>
 
-    <script>
-        function validerInscription(e) {
-            e.preventDefault();
-            const tx = document.getElementById("txNum").value.trim();
-            if (tx) {
-                localStorage.setItem("tresor_adhesion_validee", "true");
-                document.getElementById("telegramBox").style.display = "block";
-            }
-        }
-    </script>
+  <script>
+    function validerTransaction() {
+      var numTransaction = document.getElementById("wave_transaction").value.trim();
+      var zoneResultat = document.getElementById("validation-result");
+
+      if (numTransaction !== "" && numTransaction.length >= 8) {
+        zoneResultat.className = "success-box";
+        zoneResultat.style.display = "block";
+        zoneResultat.innerHTML = `
+          ✅ Adhésion enregistrée avec succès !<br>
+          <a href="https://t.me/Tresor_Prepa_INFAS" target="_blank" class="btn btn-telegram">
+            🚀 Rejoindre le canal privé Telegram
+          </a>
+        `;
+      } else {
+        zoneResultat.className = "error-box";
+        zoneResultat.style.display = "block";
+        zoneResultat.innerHTML = `
+          ❌ Transaction non validée.<br>
+          Veuillez vérifier votre numéro de transaction Wave.
+        `;
+      }
+    }
+  </script>
 
 </body>
-</html>
+            </html>
+        
