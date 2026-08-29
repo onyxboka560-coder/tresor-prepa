@@ -120,12 +120,6 @@
       object-fit: cover;
     }
 
-    .btn-green {
-      background-color: var(--green-btn);
-      color: #ffffff;
-      margin-bottom: 15px;
-    }
-
     .btn-valider {
       background-color: var(--primary-blue);
       color: #ffffff;
@@ -136,6 +130,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      margin-top: 20px;
     }
 
     .input-group label {
@@ -182,6 +177,13 @@
       color: #ffffff;
       margin-top: 12px;
     }
+
+    /* Style du formulaire encastré */
+    .form-iframe {
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -198,7 +200,7 @@
       <h2 class="section-title">Règlement du droit d'adhésion</h2>
       <ol class="instruction-list">
         <li>Payez l'adhésion via Wave.</li>
-        <li>Remplissez le formulaire.</li>
+        <li>Remplissez le formulaire ci-dessous.</li>
         <li>Saisissez votre numéro de transaction Wave.</li>
       </ol>
     </section>
@@ -224,9 +226,10 @@
 
     <!-- SECTION 4 : FORMULAIRE ET TRANSACTION -->
     <section class="card">
-      <a href="https://forms.gle/jjrC5ExrzEENcwhQ8" target="_blank" class="btn btn-green">
-        2. Remplir le formulaire
-      </a>
+      <h2 class="card-title" style="margin-bottom: 12px;">2. Remplir le formulaire d'adhésion</h2>
+      
+      <!-- Formulaire Google Forms intégré -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvMb4pEFl3bHFAWJfEPt8jweJWMppd-o28nIOPJks5vcAQg/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0" class="form-iframe">Chargement…</iframe>
 
       <div class="input-group">
         <label for="wave_transaction">3. Saisissez votre numéro de transaction Wave :</label>
@@ -271,5 +274,4 @@
   </script>
 
 </body>
-  </html>
-      
+</html>
