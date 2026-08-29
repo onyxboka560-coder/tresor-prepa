@@ -130,7 +130,6 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      margin-top: 20px;
     }
 
     .input-group label {
@@ -177,13 +176,6 @@
       color: #ffffff;
       margin-top: 12px;
     }
-
-    /* Style du formulaire encastré */
-    .form-iframe {
-      width: 100%;
-      border: none;
-      border-radius: 8px;
-    }
   </style>
 </head>
 <body>
@@ -200,21 +192,12 @@
       <h2 class="section-title">Règlement du droit d'adhésion</h2>
       <ol class="instruction-list">
         <li>Payez l'adhésion via Wave.</li>
-        <li>Remplissez le formulaire ci-dessous.</li>
+        <li>Remplissez le formulaire.</li>
         <li>Saisissez votre numéro de transaction Wave.</li>
       </ol>
     </section>
 
-    <!-- SECTION 2 : AUXILIAIRE POLYVALENT -->
-    <section class="card">
-      <h2 class="card-title">AUXILIAIRE POLYVALENT</h2>
-      <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=3535" target="_blank" class="btn btn-wave">
-        <img src="https://images.squarespace-cdn.com/content/v1/601a91e5e54d31011ffcd2bc/1612371909772-L7K4O5A66O8Q3J1U644S/Wave_logo.png" alt="Wave" class="wave-icon">
-        1. Payer l'Adhésion : 3 535 f
-      </a>
-    </section>
-
-    <!-- SECTION 3 : AUXILIAIRES SPÉCIALISÉS -->
+    <!-- SECTION 2 : AUXILIAIRES SPÉCIALISÉS (SEULEMENT) -->
     <section class="card">
       <h2 class="card-title">AUXILIAIRES SPÉCIALISÉS</h2>
       <p class="specialties-list">AIM — APGP — ABM — AHA — ASI — ASO</p>
@@ -224,12 +207,12 @@
       </a>
     </section>
 
-    <!-- SECTION 4 : FORMULAIRE ET TRANSACTION -->
+    <!-- SECTION 3 : FORMULAIRE ET TRANSACTION -->
     <section class="card">
       <h2 class="card-title" style="margin-bottom: 12px;">2. Remplir le formulaire d'adhésion</h2>
       
-      <!-- Formulaire Google Forms intégré -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvMb4pEFl3bHFAWJfEPt8jweJWMppd-o28nIOPJks5vcAQg/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0" class="form-iframe">Chargement…</iframe>
+      <!-- FORMULAIRE GOOGLE FORMS INTÉGRÉ -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvMb4pEFl3bHFAWJfEPt8jweJWMppd-o28nIOPJks5vcAQg/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0" style="border: none; border-radius: 8px; margin-bottom: 15px;">Chargement…</iframe>
 
       <div class="input-group">
         <label for="wave_transaction">3. Saisissez votre numéro de transaction Wave :</label>
