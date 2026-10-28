@@ -136,11 +136,6 @@
       border-radius: 4px;
       object-fit: cover;
     }
-
-    /* Le formulaire est masqué par défaut */
-    #form-section {
-      display: none;
-    }
   </style>
 </head>
 <body>
@@ -154,8 +149,8 @@
     <section class="card">
       <h2 class="section-title">Procédure de règlement</h2>
       <ol class="instruction-list">
-        <li>Cliquez sur le bouton Wave ci-dessous pour effectuer votre paiement.</li>
-        <li>Remplissez le formulaire d'enregistrement qui s'affichera automatiquement après avoir cliqué sur le bouton Wave.</li>
+        <li>Payez votre mensualité via le bouton Wave ci-dessous.</li>
+        <li>Remplissez attentivement le formulaire d'enregistrement.</li>
         <li class="important-notice">Envoyez obligatoirement la capture d'écran du reçu à M. BOKA par WhatsApp / Telegram au 0789687788.</li>
       </ol>
     </section>
@@ -163,14 +158,13 @@
     <section class="card">
       <h2 class="card-title">AUXILIAIRES SPÉCIALISÉS</h2>
       <p class="specialties-list">AIM — APGP — ABM — AHA — ASI — ASO</p>
-      <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=2020" target="_blank" class="btn btn-wave" id="wave-btn">
+      <a href="https://pay.wave.com/m/M_ci_v8ZtH2TIeZP8/c/ci/?amount=2020" target="_blank" class="btn btn-wave">
         <img src="https://images.squarespace-cdn.com/content/v1/601a91e5e54d31011ffcd2bc/1612371909772-L7K4O5A66O8Q3J1U644S/Wave_logo.png" alt="Wave" class="wave-icon">
         1. Payer la Mensualité : 2 020 f
       </a>
     </section>
 
-    <!-- SECTION FORMULAIRE (MASQUÉE AU DÉPART) -->
-    <section class="card" id="form-section">
+    <section class="card">
       <h2 class="card-title" style="margin-bottom: 12px;">2. Remplir le formulaire de mensualité</h2>
       
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehidLaJNlYsVAuVpG1WkHedu46otNJadUP-Lba7zJy1dpZ5A/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="border: none; border-radius: 8px;">Chargement…</iframe>
@@ -178,13 +172,5 @@
 
   </main>
 
-  <script>
-    // Écouteur sur le bouton Wave pour débloquer le formulaire
-    document.getElementById('wave-btn').addEventListener('click', function() {
-      document.getElementById('form-section').style.display = 'block';
-    });
-  </script>
-
 </body>
-        </html>
-        
+</html>
